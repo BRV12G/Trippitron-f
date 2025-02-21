@@ -70,6 +70,7 @@ export default defineConfig({
 ###### 9. npx shadcn@latest init
 ###### 10. Which style would you like to use? › New York<br>Which color would you like to use as base color? › Zinc<br>Do you want to use CSS variables for colors? › no / yes
 ###### 11. A file - src\lib\utils.js and components.json will be created and tailwind.config.js will be updated.
+###### 12. Run the project - npm run dev
 
 
 
