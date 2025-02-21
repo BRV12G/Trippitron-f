@@ -72,6 +72,6 @@ export default defineConfig({
 ###### 11. A file - src\lib\utils.js and components.json will be created and tailwind.config.js will be updated.
 ###### 12. Run the project - npm run dev
 ###### 13. created a components folder under /src
-
+### Extensions : 1.Tailwindcss intellisense<br>2.ES7+Redux+React.
 
 
