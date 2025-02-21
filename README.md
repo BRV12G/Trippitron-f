@@ -10,4 +10,13 @@
 ###### 1. npm install -D tailwindcss postcss autoprefixer
 ###### 2. npx tailwindcss init -p (This doesnot work in TailwindCss 4).
 ###### 3. Created the files tailwind.config.js and postcss.config.mjs manually 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
