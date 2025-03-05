@@ -9,6 +9,13 @@ function CreateTrip() {
   const [place,setPlace] = useState();
   const [formData,setFormData]=useState([]);
   const handleInputChange=(name,value)=>{
+
+    if(name=='noOfDays'&&value>62)
+    {
+      console.log("please enter trip days less than 62")
+      return ;
+    }
+
     setFormData({
       ...formData,
       [name]:value
@@ -18,6 +25,15 @@ function CreateTrip() {
   useEffect(()=>{
    console.log(formData)
   },[formData])
+
+ 
+  const OnGenerateTrip=()=>{
+    if(formData?.noOfDays>62)
+    {
+      return;
+    }
+    console.log(formData);
+  }
 
   return (
     <div className='sm:px-10 md:px-32 lg:px-56 xl:px-10 px-5 mt-5 mb-5 '>
@@ -92,7 +108,7 @@ function CreateTrip() {
       </div>
 
       <div className='my-10 text-center'>
-        <Button>Generate Trip</Button>
+        <Button onClick={OnGenerateTrip}>Generate Trip</Button>
       </div>
     </div>
   )
