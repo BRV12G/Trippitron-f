@@ -1,8 +1,10 @@
-import React from 'react'
+import { Input } from '../components/ui/input';
+import React, { useState } from 'react'
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete'
 
 
 function CreateTrip() {
+  const [place,setPlace] = useState();
   return (
     <div className='sm:px-10 md:px-32 lg:px-56 xl:px-10 px-5 mt-5 mb-5'>
       <h2 className='text-3xl font-bold text-center text-orange-500 mb-5'>Plan Your Perfect Getaway – Just a Few Clicks Away!</h2>
@@ -21,12 +23,20 @@ function CreateTrip() {
       <p className='text-center text-gray-500 text-lg'>Ready to explore? Tell us your destination, preferences, and vibe—TrippiTron’s AI will craft the perfect itinerary, from must-visit spots to cozy stays. No stress, just adventure!</p>
 
 
-      <div className='my-5'>
+      <div className='my-5 flex flex-col gap-10'>
         <div>
           <h2 className='text-xl font-medium mb-5 ml-1'>Enter your preferred destination</h2>
           <GooglePlacesAutocomplete
-            apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY} 
+            apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
+            selectProps={{
+              place,
+              onChange:(v)=>{setPlace(v);console.log(v)}
+            }} 
           />
+        </div>
+        <div>
+           <h2 className='text-xl font-medium mb-5 ml-1'>How many days are you Planning your Trip?</h2>
+          <Input placeholder={'Ex.3'} type="number" />
         </div>
       </div>
     </div>
