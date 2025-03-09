@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete'
 import { Button } from '@/components/ui/button';
 import { toast } from "sonner"
-import { chatSession } from './service/AiModel';
+import { chatSession } from '../service/AiModel';
 
 
 
