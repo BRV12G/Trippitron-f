@@ -12,3 +12,13 @@ https://localhost
 ```bash
 https://localhost:<Port_number>
 ```
+###### 5. Click on create and Copy your Client ID and paste it in .env.local as: <br>
+```bash
+VITE_GOOGLE_AUTH_CLIENT_ID=YOUR_CLIENT_ID
+```
+###### 6. Go to main.jsx and Paste <br> make sure you wrap the contents within the Tags and Update your Client ID.
+```bash
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
+<GoogleOAuthProvider clientId="<your_client_id>">...</GoogleOAuthProvider>;
+```
