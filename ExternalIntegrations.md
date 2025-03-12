@@ -12,4 +12,8 @@
 ###### 1. import { FcGoogle } from "react-icons/fc";
 ###### 2.<FcGoogle />
 
+###### 2. import { AiOutlineLoading3Quarters } from "react-icons/ai"; ---> <AiOutlineLoading3Quarters />
+
+
+
 ###### Axios - Axios is a http client to make an api call
