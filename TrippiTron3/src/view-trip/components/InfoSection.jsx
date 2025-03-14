@@ -24,7 +24,7 @@ function InfoSection({trip}) {
   return (
     <div>
       <img
-        src={photoUrl}
+        src={photoUrl?photoUrl:'/travel_location4.jpg'}
         className="h-[340px] w-full object-cover rounded-xl"
       />
       <div className="flex justify-between items-center">

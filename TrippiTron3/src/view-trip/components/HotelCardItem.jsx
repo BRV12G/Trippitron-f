@@ -35,7 +35,7 @@ function HotelCardItem({ hotel }) {
       {/* // <Link key={hotel.id} to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${hotel?.hotelName}, ${hotel?.hotelAddress}`)}`} */}
       {/* // target="_blank" rel="noopener noreferrer"> */}
       <div className="hover:scale-105 transition-all cursor-pointer">
-        <img src={photoUrl} className="rounded-xl h-[200px] w-full object-cover" />
+        <img src={photoUrl?photoUrl:'/travel_location6.jpg'} className="rounded-xl h-[200px] w-full object-cover" />
         <div className="my-2 flex flex-col gap-2">
           <div  className=""><h2 className="font-medium ">{hotel?.hotelName}</h2></div>
           <h2 className="text-xs text-gray-500">📍 {hotel?.hotelAddress}</h2>

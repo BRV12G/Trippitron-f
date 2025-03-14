@@ -27,8 +27,8 @@ function PlaceCardItem({place}) {
 
   return (
     <div className='border rounded-xl p-3 flex gap-5 mt-2 hover:scale-105 transition-all hover:shadow-lg cursor-pointer'>
-      <img src={photoUrl} alt={place.placeName}
-            className='w-[200px] h-[150px]  rounded-xl shadow-lg'/>
+      <img src={photoUrl?photoUrl:'/travel_location13.jpg'} alt={place.placeName}
+            className='w-[200px] h-[150px]  rounded-xl shadow-lg object-cover'/>
        <div className=''>
          <h3 className='font-bold text-lg'>{place.placeName}</h3>
          <p className='text-sm text-gray-400'>{place.placeDetails}</p>
