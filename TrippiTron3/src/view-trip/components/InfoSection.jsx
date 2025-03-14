@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Button } from "@/components/ui/button";
 import { IoIosSend } from "react-icons/io";
-import { GetPlaceDetails } from "@/service/GlobalApi";
+import { GetPlaceDetails, PHOTO_REF_URL } from "@/service/GlobalApi";
 
-const PHOTO_REF_URL='https://places.googleapis.com/v1/{NAME}/media?maxHeightPx=1000&maxWidthPx=1000&key='+import.meta.env.VITE_GOOGLE_PLACE_API_KEY
 function InfoSection({trip}) {
   const [photoUrl,setPhotoUrl]=useState();
   useEffect(()=>{
