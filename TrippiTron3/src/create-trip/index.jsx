@@ -22,6 +22,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/service/firebaseConfig";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import Footer from "@/view-trip/components/Footer";
 
 function CreateTrip() {
   const [place, setPlace] = useState();
@@ -270,7 +271,9 @@ function CreateTrip() {
           </DialogHeader>
         </DialogContent>
       </Dialog>
+      <Footer />
     </div>
+
   );
 }
 
