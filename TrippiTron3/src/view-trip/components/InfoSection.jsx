@@ -20,7 +20,7 @@ function InfoSection({trip}) {
       const PhotoUrl=PHOTO_REF_URL.replace('{NAME}', resp.data.places[0].photos[1].name);
       setPhotoUrl(PhotoUrl)
     })
-  }
+  };
   return (
     <div>
       <img

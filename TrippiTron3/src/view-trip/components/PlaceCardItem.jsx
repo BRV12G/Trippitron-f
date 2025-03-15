@@ -32,7 +32,7 @@ function PlaceCardItem({place}) {
        <div className=''>
          <h3 className='font-bold text-lg'>{place.placeName}</h3>
          <p className='text-sm text-gray-400'>{place.placeDetails}</p>
-         <p className='font-medium'>{place.ticketPricing}</p>
+         <p className='font-medium'>{place.ticketPricing?.currency} {place.ticketPricing?.amount}</p>
          <p>⭐{place.rating}</p>
          <Button className="mt-1" size="sm" onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${place.placeName}`, '_blank')}><FaMapLocationDot /></Button>
        </div>

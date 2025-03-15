@@ -45,21 +45,13 @@ function PlacesToVisit({ trip }) {
       <h2 className='font-bold text-2xl capitalize'>Itinerary</h2>
       <div>
         {trip.tripData?.itinerary &&
-          Object.entries(trip.tripData.itinerary).sort(([dayA], [dayB]) => dayA.localeCompare(dayB, undefined, { numeric: true })).map(([day, data], index) => (
+          Object.entries(trip.tripData.itinerary).map(([day, data], index) => (
             <div key={index} className='mb-4'>
               <h2 className='font-semibold text-lg capitalize'>{day}</h2>
               <div className='grid md:grid-cols-2 gap-5' >
               {data.plan.map((place, placeIndex) => (
                 <div key={placeIndex} className=''>
                   <h2 className='font-medium text-sm text-orange-600'>{place.timeTravel}</h2>
-                  {/* <h3 className='font-semibold'>{place.placeName}</h3>
-                  <p>{place.placeDetails}</p>
-                  <p><strong>Ticket Pricing:</strong> {place.ticketPricing}</p>
-                  <img
-                    src='/travel_location11.jpg'
-                    alt={place.placeName}
-                    className='w-full h-48 object-cover rounded-md mt-2'
-                  /> */}
                   <PlaceCardItem place={place}/>
                 </div>
               ))}
@@ -95,4 +87,7 @@ PlacesToVisit.propTypes = {
 };
 
 export default PlacesToVisit;
+
+
+
 
