@@ -64,7 +64,8 @@ function Header() {
       <div>
         {user?
         <div className='flex items-center gap-5'>
-              
+              <Button onClick={() => window.location.href = '/create-trip'} variant="outline" className="rounded-full">Create Trip</Button>
+
               <Button onClick={() => window.location.href = '/my-trips'} variant="outline" className="rounded-full">My Trips</Button>
 
   
