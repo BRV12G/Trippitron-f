@@ -14,7 +14,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 // import Viewtrip from './view-trip/[tripId]/index.jsx';
 import MyTrips from './my-trips'
 import { lazy, Suspense } from 'react';
-const Viewtrip = lazy(() => import("./view-trip/[tripId]/index.jsx"));
+const Viewtrip = lazy(() => import("./view-trip/tripId/index.jsx"));
 
 
 
