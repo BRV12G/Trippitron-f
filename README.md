@@ -75,4 +75,9 @@ export default defineConfig({
 #### Extensions : <br>1.Tailwindcss intellisense<br>2.ES7+Redux+React.
 #### Default react template shortcut - rfec.
 
-
+###### add a vercel.json file in the root to support createtrip and mytrip buttons in the header <br>
+```bash
+{
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  }
+```
