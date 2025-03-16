@@ -11,8 +11,10 @@ import Header from './components/custom/Header'
 // import { RouterProvider } from 'react-router'
 import { Toaster } from "@/components/ui/sonner"
 import { GoogleOAuthProvider } from '@react-oauth/google';
-import Viewtrip from './view-trip/[tripId]/index.jsx'
+// import Viewtrip from './view-trip/[tripId]/index.jsx';
 import MyTrips from './my-trips'
+import { lazy, Suspense } from 'react';
+const Viewtrip = lazy(() => import("./view-trip/[tripId]/index.jsx"));
 
 
 
@@ -25,9 +27,17 @@ const router = createBrowserRouter([
     path: '/create-trip',
     element: <CreateTrip />,
   },
+  // {
+  //   path:'/view-trip/:tripId',
+  //   element:<Viewtrip />
+  // },
   {
-    path:'/view-trip/:tripId',
-    element:<Viewtrip />
+    path: '/view-trip/:tripId',
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <Viewtrip />
+      </Suspense>
+    ),
   },
   {
     path:'/my-trips',
