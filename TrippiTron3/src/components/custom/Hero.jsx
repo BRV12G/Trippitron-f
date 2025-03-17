@@ -91,7 +91,7 @@ function Hero() {
         <div className="flex justify-center mt-6">
           <Link to={'/create-trip'}>
             <Button variant="secondary" className="px-6 py-3 text-lg">
-              Get Started, It's Free
+              Get Started, It&apos;s Free
             </Button>
           </Link>
         </div>
