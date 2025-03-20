@@ -11,7 +11,7 @@ import About from "../About";
 function Hero() {
   return (
     <div>
-      <div className="flex items-center py-4 mx-6 gap-9 shadow-md">
+      <div className="flex flex-col  items-center py-4 mt-6 gap-6 lg:gap-9 shadow-md lg:flex-row mx-12">
         <img
           src="/travel_location4.jpg"
           height={350}
