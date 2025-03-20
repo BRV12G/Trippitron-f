@@ -32,7 +32,7 @@ function InfoSection({trip}) {
           <h2 className="font-bold text-2xl">
             {trip?.userSelection?.location?.label}
           </h2>
-          <div className="flex gap-4">
+          <div className="lg:flex gap-4 flex-col">
             <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-md">
               📅 {trip.userSelection?.noOfDays} Day
             </h2>

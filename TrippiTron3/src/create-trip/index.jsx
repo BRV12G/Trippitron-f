@@ -140,7 +140,7 @@ function CreateTrip() {
 
   return (
     <div className="sm:px-10 md:px-32 lg:px-56 xl:px-10 px-5 mt-5 mb-5 ">
-      <h2 className="text-3xl font-bold text-center text-orange-500 mb-5">
+      <h2 className="lg:text-3xl text-[20px] font-bold text-center text-orange-500 mb-5">
         Plan Your Perfect Getaway – Just a Few Clicks Away!
       </h2>
       {/* <div className="flex justify-between mb-5">
