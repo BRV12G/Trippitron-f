@@ -4,6 +4,7 @@ import React, { useEffect, useState }  from 'react'
 import { useNavigation } from 'react-router-dom';
 import { query } from 'firebase/firestore';
 import UserTripCardItem from './components/UserTripCardItem';
+import Footer from '@/view-trip/components/Footer';
 
 function MyTrips() {
   const navigation=useNavigation();
@@ -45,6 +46,7 @@ setUserTrips(trips);
         </div>
       ))}
       </div>
+      <Footer />
     </div>
   )
 }
