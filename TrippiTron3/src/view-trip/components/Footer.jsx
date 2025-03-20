@@ -58,7 +58,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="shadow-lg py-8 rounded-lg bg-white mx-12">
+    <footer className=" py-8 rounded-lg bg-white mx-12">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8 px-5">
         
         {/* Logo & About */}
