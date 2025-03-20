@@ -1,6 +1,6 @@
 export default function About() {
     return (
-      <div className="py-12 bg-blue-100 mx-12 rounded-sm">
+      <div className="py-12 px-4 bg-blue-100 mx-12 rounded-sm">
         <h2 className="text-4xl font-bold text-center mb-10">About TrippiTron</h2>
         <div className="max-w-4xl mx-auto text-gray-700 leading-relaxed">
           <p className="mb-6">
