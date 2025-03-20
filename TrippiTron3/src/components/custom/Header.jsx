@@ -242,14 +242,14 @@ function Header() {
                   className="h-12 w-12 rounded-full object-cover"
                 />
                 <button
-                  className="text-red-500 font-semibold"
+                  className=" font-semibold bg-black"
                   onClick={() => {
                     googleLogout();
                     localStorage.clear();
                     window.location.reload();
                   }}
                 >
-                  Logout
+                  <span>Logout</span>
                 </button>
               </div>
             </>
