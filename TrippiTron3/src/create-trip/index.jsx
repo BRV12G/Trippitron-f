@@ -23,17 +23,23 @@ import { db } from "@/service/firebaseConfig";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import Footer from "@/view-trip/components/Footer";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation , Autoplay} from 'swiper/modules';
 
 function CreateTrip() {
-  const imageUrls = [
-    "/travel_location5.jpg",
-    "/travel_location6.jpg",
-    "/travel_location7.jpg",
-    "/travel_location8.jpg",
-    "/travel_location9.jpg",
-    "/travel_location11.jpg",
-    "/travel_location13.jpg",
+  
+  const images = [
+    '/travel_location5.jpg',
+    '/travel_location6.jpg',
+    '/travel_location7.jpg',
+    '/travel_location8.jpg',
+    '/travel_location9.jpg',
+    '/travel_location11.jpg',
+    '/travel_location13.jpg'
   ];
+
 
   const [place, setPlace] = useState();
   const [formData, setFormData] = useState([]);
@@ -137,7 +143,7 @@ function CreateTrip() {
       <h2 className="text-3xl font-bold text-center text-orange-500 mb-5">
         Plan Your Perfect Getaway – Just a Few Clicks Away!
       </h2>
-      <div className="flex justify-between mb-5">
+      {/* <div className="flex justify-between mb-5">
         <img
           src="/travel_location5.jpg"
           height={280}
@@ -168,22 +174,43 @@ function CreateTrip() {
           width={201}
           className="rounded-md shadow-md"
         ></img>
-        {/* <img src="/travel_location10.jpg" height={280} width={201} className='rounded-md shadow-md'></img>  */}
         <img
           src="/travel_location11.jpg"
           height={280}
           width={201}
           className="rounded-md shadow-md"
         ></img>
-        {/* <img src="/travel_location12.jpg" height={280} width={201} className='rounded-md shadow-md'></img> */}
         <img
           src="/travel_location13.jpg"
           height={280}
           width={201}
           className="rounded-md shadow-md"
         ></img>
-        {/* <img src="/travel_location14.jpg" height={280} width={201} className='rounded-md shadow-md'></img> */}
-      </div>
+      </div> */}
+      <div className="my-10">
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        spaceBetween={20}
+        slidesPerView={3}
+        navigation
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false
+        }}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="w-full"
+      >
+        {images.map((src, index) => (
+          <SwiperSlide key={index}>
+            <img src={src} alt={`Destination ${index + 1}`} className="rounded-md shadow-md w-full h-[480px] object-cover" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
       <p className="text-center text-gray-500 text-lg">
         Ready to explore? Tell us your destination, preferences, and
         vibe—TrippiTron’s AI will craft the perfect itinerary, from must-visit
@@ -217,14 +244,16 @@ function CreateTrip() {
           />
         </div>
       </div>
+
+
       <div>
         <h2 className="text-xl font-medium mb-5 ml-1">What is Your Budget?</h2>
-        <div className="grid grid-cols-3 gap-24 mt-5 mx-auto max-w-4xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-24 mt-5 mx-auto max-w-4xl">
           {SelectBudgetOptions.map((item, index) => (
             <div
               key={index}
               onClick={() => handleInputChange("budget", item.title)}
-              className={`p-4 border rounded-lg hover:shadow-xl cursor-pointer              
+              className={`p-4 border rounded-lg hover:shadow-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-105         
             ${formData?.budget == item.title && "shadow-lg border-black"}
             `}
             >
@@ -240,12 +269,12 @@ function CreateTrip() {
         <h2 className="text-xl font-medium mb-5 ml-1">
           Who do You Plan to Travel with?
         </h2>
-        <div className="grid grid-cols-4 gap-24 mt-5 mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-24 gap-6 mt-5 mx-auto max-w-6xl">
           {SelectTravelesList.map((item, index) => (
             <div
               key={index}
               onClick={() => handleInputChange("traveler", item.people)}
-              className={`p-4 border rounded-lg hover:shadow-xl cursor-pointer
+              className={`p-4 border rounded-lg hover:shadow-xl cursor-pointer transition-transform duration-300 transform hover:scale-105
             ${formData?.traveler == item.people && "shadow-lg border-black"}
             `}
             >
