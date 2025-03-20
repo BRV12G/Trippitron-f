@@ -1,6 +1,12 @@
 import React from "react";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
+import Footer from "@/view-trip/components/Footer";
+import Function from "../cardshero";
+import PopularDestinations from "../PopularDestinations";
+import HowItWorks from "../HowItWorks";
+import About from "../About";
+
 
 function Hero() {
   return (
@@ -16,6 +22,14 @@ function Hero() {
           <span className="text-orange-500">Dream, Plan, Pack, Explore!</span>
           <br></br>
           Let TrippiTron’s AI craft your perfect adventure! 🌍
+          <p className=" text-gray-400 font-semibold text-[20px] text-center px-2 mt-8">
+          Let AI take the stress out of planning. From dream destinations to personalized itineraries — your perfect trip starts here
+        </p>
+        <div className="flex justify-center ">
+          <Link to={'/create-trip'}>
+            <Button variant="secondary" className="bg-orange-500 text-white hover:shadow-lg hover:bg-blue-500" >Get Started, It's Free</Button>
+          </Link>
+        </div>
         </h1>
         <img
           src="/travel_location3.jpg"
@@ -24,23 +38,20 @@ function Hero() {
           className="rounded-md shadow-md"
         />
       </div>
-      <div className=" py-4 mx-6 gap-9 shadow-md bg-neutral-900 rounded-md">
-        <p className="text-white font-semibold text-[20px] text-center mx-auto shadow-lg px-2">
-          Your ultimate AI-powered travel companion!<br></br>
-          TrippiTron helps you plan perfect itineraries, find the best hotels,
-          discover must-visit locations, and craft unforgettable trips, all in
-          just a few clicks.<br></br>
-          Whether you're a solo traveler, a couple, or a group explorer, our
-          smart AI curates personalized travel experiences just for you.
-          <br></br>
-          Say goodbye to travel stress and hello to seamless adventures!
-        </p>
-        <div className="flex justify-center mt-4">
-          <Link to={'/create-trip'}>
-            <Button variant="secondary">Get Started, It's Free</Button>
-          </Link>
-        </div>
-      </div>
+
+    <div>
+    <HowItWorks />
+
+    <PopularDestinations />
+    <About />
+
+      <Function />
+    </div>
+
+
+
+    
+      <Footer />
     </div>
   );
 }
