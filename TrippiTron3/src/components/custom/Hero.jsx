@@ -22,10 +22,10 @@ function Hero() {
           <span className="text-orange-500 ">Dream, Plan, Pack, Explore!</span>
           <br></br>
           Let TrippiTron’s AI craft your perfect adventure! 🌍
-          <p className=" text-gray-400 font-semibold lg:text-[20px] text-[15px] text-center px-2 mt-8">
+          <p className=" text-gray-400 font-semibold lg:text-[20px] text-[15px] text-center px-2 mt-4">
           Let AI take the stress out of planning. From dream destinations to personalized itineraries — your perfect trip starts here
         </p>
-        <div className="flex justify-center ">
+        <div className="flex justify-center mt-4">
           <Link to={'/create-trip'}>
             <Button variant="secondary" className="bg-orange-500 text-white hover:shadow-lg hover:bg-blue-500" >Get Started, It's Free</Button>
           </Link>

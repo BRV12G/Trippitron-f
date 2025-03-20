@@ -129,7 +129,7 @@ export default function PopularDestinations() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="py-12 bg-white mx-12">
+    <div className="py-12 bg-white">
       <h2 className="text-4xl font-bold text-center mb-10">Popular Destinations</h2>
       <Swiper
         slidesPerView={1}
