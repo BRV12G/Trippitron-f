@@ -191,7 +191,7 @@ function CreateTrip() {
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={20}
-        slidesPerView={3}
+        slidesPerView={1}
         navigation
         autoplay={{
           delay: 2000,
